@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book showcase| Book 1 Details </title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        .header {
+            background: linear-gradient(to right, #bccab9 , #5385ea );
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .Home_1 {
+            float: right;
+            margin-right: 13px;
+            margin-top: 10px;
+        }
+
+        .Home_1 a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            padding: 10px 20px;
+            background: linear-gradient(to right,#1A1A1D, #f0f0f0);
+            border-radius: 5px;
+            <!-- transition: all 0.3s ease; -->
+        }
+
+        .Home_1 a:hover {
+            background: linear-gradient(to right, #333333, #444444);
+            color: white;
+        }
+
+        .book-img {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .book-img h1 {
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .book-img img {
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .book-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .accordion {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: linear-gradient(to right, #ffffff, #f8f8f8);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 5px;
+            background: linear-gradient(to right, #C0392B, #2980B9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .bhai {
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .bhai label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .bhai input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .bhai input[type="text"]:focus {
+            border-color: #00b4db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,180,219,0.3);
+        }
+
+        .bhai textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 120px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .bhai textarea:focus {
+            border-color: #00b4db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,180,219,0.3);
+        }
+
+        .bhai button {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .bhai button:hover {
+            background: linear-gradient(to right, #0083b0, #00b4db);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .footer {
+            background: linear-gradient(to right, #bccab9 , #5385ea );
+            color: white;
+            text-align: center;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .book-img, .bhai {
+            animation: fadeIn 1s ease-out;
+        }
+    </style>
+
+</head>
+<body class="body">
+    <header> <div class="header">
+        <h1>Book showcase: Book 2 Details</h1>
+      </div>
+    </header>
+    <span class="Home_1"> <a href="index.html">Home</a></span>
+
+    <section>
+        <div class="book-img">
+            <h1>How to be calm in a Busy World</h1>
+            <div>
+                <img src="./public/image/book_2_front.jpg" width="200px" height="250px" alt="">
+            </div>
+            
+            <div>
+                <section class="accordion">
+                    <details>
+                        <summary>Genere</summary>
+                        <ul>
+                            <li>Self-help</li>
+                            <li>Philosophy</li>
+                            <li>Mindfulness</li>
+                            <li>Spirituality</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Index Page</summary>
+                        <ul>
+                            <li>Introduction</li>
+                            <li>Chapter 1 : Overview</li>
+                            <li>Chapter 2 : Advance Concept</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Author</summary>
+                        <ul>
+                            <li>Haemin Sunim </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Overview</summary>
+                        <ul>
+                            <li>The Things You Can See Only When You Slow Down is a collection of short essays, reflections, and insights designed to encourage readers to slow down, live mindfully, and find peace amidst the hustle and bustle of modern life</li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>Competitive Exam Relevance</summary>
+                            <ul>
+                                <li>Author’s Background: Knowing about authors like Haemin Sunim and their contributions to self-help and philosophy can be relevant in literature and general knowledge sections of competitive exams, especially in exams that focus on modern thought and mindfulness literature.</li>
+                            </ul>
+                    </details>
+                    <details>
+                        <summary>Purchase link</summary>
+                        <ul>
+                           <li><a href="https://www.amazon.in/gp/aw/d/0241340667/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=edeb2f76bd92a5f22b7b67fef9bbc0fe&hsa_cr_id=0&qid=1742192178&sr=1-3-e0fa1fdd-d857-4087-adda-5bd576b25987&ref_=sbx_be_s_sparkle_lsi4d_asin_2_img&pd_rd_w=kabjO&content-id=amzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d%3Aamzn1.sym.df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_p=df9fe057-524b-4172-ac34-9a1b3c4e647d&pf_rd_r=WGCH7WDY58ZW2ES7E7FD&pd_rd_wg=OXuOQ&pd_rd_r=afe46ee3-66be-44ce-9177-03680cc37690">amazon</a></li>  
+                           <li><a href="https://www.myntra.com/">Myntra</a></li>
+                             
+                        </ul>
+                    </details>
+                    
+            
+        
+            </div>
+        </div>
+        <div><h2>Feedback Form</h2></div>
+        <div style="display: flex; justify-content: center;">
+            
+            <form class="bhai">
+                <label for="text">Name</label>
+                <br>
+                <input type="text"> <br>
+                <label for="message">Feedback</label>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                <br>
+                <button>Submit Feedback</button>
+            </form>
+
+        </div>
+       
+    </section>
+    <footer class="footer">
+        <p>©2025 books showcase | All right region</p>
+       </footer>
+   <script src="app.js"></script>
+</body>
+</html>

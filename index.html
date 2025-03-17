@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShowcase</title>
+    <link rel="icon" href="./public/image/book_1_front.jpg">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header>
+    <div class="welcome">
+        <h1 >Welcome to Book Showcase</h1>
+    </div>
+    <div class="explore">
+        <h2 >Explore Books</h2>
+        <a  href="">Home</a>
+        
+        
+    </div>
+   </header>
+   <main>
+    <div class="container">
+        <div class="card">
+            <div class="card_inner">
+                <div class="card_front">
+                    <img src="./public/image/book_1_front.jpg" width="180px" height="209px" alt="Front Image">
+                </div>
+                <div class="card_back">
+                    <div onclick="window.location.href='book_1.html'">
+                        <img src="./public/image/book_1_back.jpg" width="180px" height="208px" alt="Back Image">
+                    </div>
+                </div>
+                <div class="label_text">
+                    C <br>O <br>U <br>N <br>T<br><br>M<br>A<br>R<br>K<br>S<br>P<br>A<br>C<br>E<br>
+                </div>
+            </div>
+        </div>   
+        <div class="card">
+            <div class="card_inner">
+                <div class="card_front">
+                    <img src="./public/image/book_2_front.jpg" width="180px" height="209px" alt="Front Image">
+                </div>
+                <div class="card_back">
+                    <div onclick="window.location.href='book_2.html'">
+                        <img src="./public/image/book_2_back.jpg" width="180px" height="208px" alt="Back Image">
+                    </div>
+                </div>
+                <div class="label_text">
+                    H <br>A <br>E <br>M <br> I <br>N <br><br> S <br>U <br>N <br> I <br> M
+                </div>
+            </div>
+        </div>     
+        <div class="card">
+            <div class="card_inner">
+                <div class="card_front">
+                    <img src="./public/image/book_3_front.jpg" width="180px" height="209px" alt="Front Image">
+                </div>
+                <div class="card_back">
+                    <div onclick="window.location.href='book_3.html'">
+                        <img src="./public/image/book_3_back.jpg" width="180px" height="208px" alt="Back Image">
+                    </div>
+                </div>
+                <div class="label_text">
+                   T <br>H <br> E <br><br>A <br>L <br>E <br>X <br>A <br>N <br>D <br>R <br>E <br>
+                </div>
+            </div>
+        </div>       
+    </div>
+</main>
+
+
+<footer>
+    <div class="footer">
+        <p>Copyright &copy; 2025 Book Showcase</p>
+    </div>
+</footer>
+
+
+<script>
+    function showPopup() {
+        document.getElementById('popup').style.display = 'block';
+        playSound();  // Play sound when popup appears
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function playSound() {
+        var sound = document.getElementById('popSound');
+        sound.play();
+    }
+</script>
+    
+</body>
+</html>
